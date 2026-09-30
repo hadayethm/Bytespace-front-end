@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-white text-ink antialiased; }
+}
+@layer components {
+  .bg-grid {
+    @apply bg-brand;
+    background-image:
+      linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+    background-size: 120px 120px;
+  }
+  .container-page { @apply mx-auto w-full max-w-page px-5; }
+  .btn-lime { @apply inline-flex items-center justify-center rounded-full bg-lime px-6 py-3 text-sm font-medium text-ink transition hover:brightness-95; }
+  .chip { @apply inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-2 text-sm text-neutral-700 transition hover:bg-neutral-200; }
+  .chip-active { @apply bg-lime text-ink hover:bg-lime; }
+  .input { @apply w-full rounded-xl border border-neutral-200 bg-neutral-50 px-5 py-4 text-neutral-700 outline-none focus:border-brand; }
+}
